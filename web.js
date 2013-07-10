@@ -8,6 +8,7 @@ app.get('/', function(request, response) {
   response.send('screw you');
   var buf = fs.readFileSync('index.html');
   response.send(buf.toString());
+  response.send('screw you again...');
 });
 
 var port = process.env.PORT || 5000;
