@@ -8,6 +8,7 @@ var contents = fs.readFileSync('index.html');
 
 app.get('/', function(request, response) {
   response.send('screw you');
+  response.send(contents.size);
 });
 
 var port = process.env.PORT || 5000;
