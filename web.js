@@ -8,7 +8,9 @@ var contents = fs.readFileSync('index.html');
 
 app.get('/', function(request, response) {
   response.send('Hello World 2!');
-  response.send(contents);
+  response.send(contents.toString('utf8'));
+  console.log('1' + contents);
+  console.log('2' + contents.toString('utf8'));
 });
 
 var port = process.env.PORT || 5000;
